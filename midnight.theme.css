@@ -1,0 +1,130 @@
+/**
+* @name Midnight
+* @author Lopus312#7114
+* @description Better night theme for discord, color palette inspired by Nocturnal theme (discord.gg/PZdnCVD)
+* @version 1.0.0
+*/
+
+/* icons on muted channels */
+.modeMuted-2T4MDZ .icon-2W8DHg{
+	color: var(--muted-channel-icon);
+}
+/* embed */
+.embedFull-1HGV2S{
+	background: var(--background-secondary-alt);
+} 
+/* Friend list */
+.theme-dark .container-2cd8Mz{
+	background: var(--background-primary);
+}
+.modeSelected-3DmyhH .name-28HaxV {
+	color: var(--channelName-active);
+}
+/* side pill */
+.item-2LIpTv{
+	background-color: var(--mainColor);
+}
+/*reaction div*/
+.reaction-2A2y9y{
+	background: var(--background-secondary-alt);
+}
+/* top left image */
+.childWrapper-1j_1ub{
+	background-image: url("https://i.imgur.com/B5NxIWy.png");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 70px 53px;
+	background-color: var(--midnight-blue);
+}
+.theme-dark .lookFilled-yCfaCM.colorPrimary-2AuQVo{
+	background-color: var(--interactive-custom-normal);
+}
+.theme-dark .lookFilled-yCfaCM.colorPrimary-2AuQVo:hover{
+	background-color: var(--interactive-custom-hover);
+}
+/* top channel buttons like pin, member list, threads etc*/
+.clickable-ZD7xvu .icon-2xnN2Y{
+	color: var(--interactive-custom-normal);
+}
+.clickable-ZD7xvu:hover .icon-2xnN2Y{
+	color: var(--interactive-custom-hover);
+}
+.selected-29KTGM .icon-2xnN2Y{
+	color: var(--interactive-custom-active);
+}
+/* mute, deafen, settings buttons*/
+.button-12Fmur{
+	color:var(--interactive-custom-normal);
+}
+
+/* user popout */
+.userPopout-2j1gM4{
+	border: 2px solid #080b0f
+}
+
+/* removing original discord svg on top left*/
+svg.homeIcon-r0w4ny path{
+	d:path("");
+}
+
+/* placeholder text in input field to text channel */
+.placeholder-1_mJY1{
+	color: #8a8a8a;
+}
+
+/* Nitro buy screen (for some reason there is hardcoded color)*/
+.theme-dark .root-g14mjS{
+	background-color: var(--background-primary);
+}
+.theme-dark .footer-31IekZ{
+	background-color: var(--background-secondary);
+}
+
+/* boost tiers in server settings */
+.theme-dark .tierHeader-3q9jIw{
+	background-color: var(--background-secondary-alt);
+}
+.theme-dark .tierBody-1d3UiS{
+	background-color: var(--background-secondary);
+}
+
+/* audit log */
+.theme-dark .headerDefault-1e6yjj, .theme-dark .headerClickable-zGQJz3{
+	background-color: var(--background-secondary-alt);
+}
+:root {
+	
+	--background-primary: #12171d;
+	--background-secondary: #10141a;
+	--background-tertiary: #080b0f;
+	--background-secondary-alt: #0c1014;	
+	--mainColor: #2275c9;
+	--muted-channel-icon: #12375c;
+	--midnight-blue: #191970;
+	--channeltextarea-background: #0e1217;
+	--channelName-active: #d1d1d1;
+	
+	--background-modifier-hover: rgba(50,50,150,0.16);
+	--background-modifier-selected: rgba(50,100,200,0.16);		
+	--background-modifier-active: rgba(50,70,180,0.16);
+	
+	--interactive-custom-normal: var(--mainColor);
+	--interactive-custom-hover: #5da0e3;
+	--interactive-custom-active: #9ccdff;
+	
+	--text-muted: var(--mainColor);
+	--background-floating: var(--background-secondary);
+	--brand-experiment: var(--midnight-blue);
+	--deprecated-card-bg: var(--background-secondary);
+	--deprecated-card-editable-bg: var(--background-secondary);
+	
+	/* scrollbars */
+	--scrollbar-thumb: var(--background-secondary-alt);
+	--scrollbar-track: transparent;
+	--scrollbar-thin-thumb: var(--scrollbar-thumb);
+	/*--scrollbar-thin-track: transparent;*/
+	--scrollbar-auto-thumb: var(--scrollbar-thumb);
+	--scrollbar-auto-track: var(--scrollbar-track);
+    --scrollbar-auto-scrollbar-color-thumb: var(--scrollbar-thumb);
+    --scrollbar-auto-scrollbar-color-track: var(--scrollbar-track);
+}
