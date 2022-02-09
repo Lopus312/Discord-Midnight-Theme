@@ -92,6 +92,92 @@ svg.homeIcon-r0w4ny path{
 .theme-dark .headerDefault-1e6yjj, .theme-dark .headerClickable-zGQJz3{
 	background-color: var(--background-secondary-alt);
 }
+
+/*  User profile */ 
+
+/* banner */
+.banner-1YaD3N{
+	width: calc(600px - var(--userProfileBorder)*2);
+}
+/* Top part*/
+.topSection-13QKHs{
+	margin:var(--userProfileBorder) var(--userProfileBorder) 0px var(--userProfileBorder);
+}
+/* Bottom part*/
+.noTabBar-2Q-iE_, .body-1Ukv50{
+	margin:0px var(--userProfileBorder) var(--userProfileBorder) var(--userProfileBorder);
+}
+
+/* Border animation for user profile (from:https://codepen.io/gayane-gasparyan/pen/jOmaBQK)*/
+.theme-dark .root-g14mjS:after{
+	position: absolute;
+	content: "";
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: -1;
+	height: 100%;
+	width: 100%;
+	filter: blur(5px);
+	background-image: linear-gradient(
+		var(--rotate)
+		, #5d5dff,  #4e00c2, #191970, #4e00c2,  #5d5dff);
+		opacity: 1;
+	transition: opacity .5s;
+	animation: spin 15s linear infinite;
+}
+
+/* Selected channel animation */
+.modeSelected-3DmyhH .content-1gYQeQ:after{
+	content: "";
+	position: absolute;
+	top: 90%;
+    left: 25px;
+    right: 0px;
+    z-index: -1;
+    height: 2.5px;
+    width: 80%;
+    filter: blur(1px);
+    background: linear-gradient(
+		to left,
+		#5d5dff,  #4e00c2, #191970, #4e00c2,  #5d5dff
+		/*#191970,
+		#160361,
+		#160361,
+		#191970,
+		#250361,
+		#701930,
+		#250361*/
+    );
+    background-size: 200% 200%;
+    animation: animateGlow 10s linear infinite;
+}
+
+/* Selected channel animation */
+@keyframes animateGlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 200% 50%;
+  }
+}
+
+@property --rotate {
+  syntax: "<angle>";
+  initial-value: 132deg;
+  inherits: false;
+}
+
+@keyframes spin {
+  0% {
+    --rotate: 0deg;
+  }
+  100% {
+    --rotate: 360deg;
+  }
+}
+
 :root {
 	
 	--background-primary: #12171d;
@@ -103,10 +189,11 @@ svg.homeIcon-r0w4ny path{
 	--midnight-blue: #191970;
 	--channeltextarea-background: #0e1217;
 	--channelName-active: #d1d1d1;
+	--userProfileBorder: 5px;
 	
-	--background-modifier-hover: rgba(50,50,150,0.16);
-	--background-modifier-selected: rgba(50,100,200,0.16);		
-	--background-modifier-active: rgba(50,70,180,0.16);
+	--background-modifier-selected: #27378740;
+	--background-modifier-active: #222c7d40;
+	--background-modifier-hover: #19197040;
 	
 	--interactive-custom-normal: var(--mainColor);
 	--interactive-custom-hover: #5da0e3;
