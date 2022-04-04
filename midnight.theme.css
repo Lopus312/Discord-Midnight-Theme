@@ -36,6 +36,11 @@
 	background-size: 70px 53px;
 	background-color: var(--midnight-blue);
 }
+/* Sticker upload*/
+.previewDark-3Xp3UB{
+	background: var(--background-tertiary);
+}
+
 .theme-dark .lookFilled-yCfaCM.colorPrimary-2AuQVo{
 	background-color: var(--interactive-custom-normal);
 }
@@ -56,7 +61,6 @@
 .button-12Fmur{
 	color:var(--interactive-custom-normal);
 }
-
 /* background of signal strenght when connected to voice, by default it is --text-muted*/
 .ping-2IpLcU{
 	color:#72767d;
@@ -65,12 +69,10 @@
 svg.homeIcon-r0w4ny path{
 	d:path("");
 }
-
 /* placeholder text in input field to text channel */
 .placeholder-1_mJY1{
 	color: #8a8a8a;
 }
-
 /* Nitro buy screen (for some reason there is hardcoded color)*/
 .theme-dark .root-g14mjS{
 	background-color: var(--background-primary);
@@ -78,7 +80,6 @@ svg.homeIcon-r0w4ny path{
 .theme-dark .footer-31IekZ{
 	background-color: var(--background-secondary);
 }
-
 /* boost tiers in server settings */
 .theme-dark .tierHeader-3q9jIw{
 	background-color: var(--background-secondary-alt);
@@ -86,10 +87,42 @@ svg.homeIcon-r0w4ny path{
 .theme-dark .tierBody-1d3UiS{
 	background-color: var(--background-secondary);
 }
-
 /* audit log */
 .theme-dark .headerDefault-1e6yjj, .theme-dark .headerClickable-zGQJz3{
 	background-color: var(--background-secondary-alt);
+}
+/* Voice channel "no one else is here yet" message background and button color*/
+.tile-2TcwiO{
+	background-color: rgb(16,20,26);
+}
+.button-3Vyz67{
+	background-color: rgb(34,117,201);
+}
+.button-3Vyz67:hover{
+	background-color: rgb(93,160,227);
+}
+
+.input-3r5zZY{
+	background-color: var(--background-tertiary);
+}
+
+/*
+	Stream preview
+*/
+.theme-dark .watchButton-2YRKxv{
+	color: var(--mainColor);
+	border-color: var(--mainColor);
+}
+.theme-dark .previewContainer-35LFgt{
+	background-color: var(--background-primary);
+}
+.theme-dark .streamPreview-I7itZ6{
+	background-color: var(--background-primary);
+}
+
+/* Date dividers in message list */
+.divider-2rZFJK{
+	background-color: var(--midnight-blue);
 }
 
 /*  
@@ -119,7 +152,6 @@ svg.homeIcon-r0w4ny path{
 /* banner */
 .banner-1YaD3N{
 	border-radius:8px 8px 0px 0px;
-	width: calc(600px - var(--userProfileBorder)*2);
 }
 /* Top part*/
 .topSection-13QKHs{
@@ -160,16 +192,16 @@ svg.homeIcon-r0w4ny path{
     background: linear-gradient(
 		to left,
 		#5d5dff,  #4e00c2, #191970, #4e00c2,  #5d5dff
-		/*#191970,
-		#160361,
-		#160361,
-		#191970,
-		#250361,
-		#701930,
-		#250361*/
     );
     background-size: 200% 200%;
     animation: animateGlow 10s linear infinite;
+}
+
+/* Create a server button (show light mode style even if dark mode is enabled for some reason) */
+.theme-light .lookFilled-yCfaCM.colorGrey-2iAG-B{
+	background-color: var(--interactive-custom-normal);
+}.theme-light .lookFilled-yCfaCM.colorGrey-2iAG-B:hover{
+	background-color: var(--interactive-custom-hover);
 }
 
 /* Selected channel animation */
@@ -180,6 +212,24 @@ svg.homeIcon-r0w4ny path{
   100% {
     background-position: 200% 50%;
   }
+}
+
+.theme-dark .buttonContainer-28osRq{
+	background-color: var(--background-secondary);
+}
+
+.theme-dark.navRow-dG-XX8{
+	background-color: var(--background-secondary);
+}
+
+.theme-dark .perksModal-CLcR1c{
+	background-color: var(--background-primary);
+}
+.theme-dark .tierBody-3ju-rc{
+	background-color: var(--background-secondary);
+}
+.theme-dark .perk-19D_HN{
+	background-color: var(--background-secondary);
 }
 
 @property --rotate {
@@ -197,30 +247,56 @@ svg.homeIcon-r0w4ny path{
   }
 }
 
-:root {
+/* Members categories */
+.membersGroup-2eiWxl{
+	color:#2249c9;
+}
+
+/* Channel category*/
+.clickable-2AoIYN:hover div,.clickable-2AoIYN:hover path{
+	color:#191970;
+}
+
+.clickable-2AoIYN div{
+	color: #2249c9;
+}
+
+
+:root, .theme-light, .theme-dark {
+	--header-primary:#fff;
+	--header-secondary:#b9bbbe;
+	--text-normal:#dcddde;
 	--background-primary: #12171d;
 	--background-secondary: #10141a;
 	--background-tertiary: #080b0f;
 	--background-secondary-alt: #0c1014;	
 	--mainColor: #2275c9;
-	--muted-channel-icon: #12375c;
 	--midnight-blue: #191970;
 	--channeltextarea-background: #0e1217;
 	--channelName-active: #d1d1d1;
 	--userProfileBorder: 3px;
 	
+	--muted-channel-icon: #12375c;
+	--channel-icon: var(--mainColor);
+	
+	--input-background: var(--background-secondary);
+	
+	--background-nested-floating: var(--background-primary);
+    --background-mobile-primary: var(--background-primary);
+    --background-mobile-secondary:var(--background-secondary);
+	
 	--background-modifier-selected: #27378740;
 	--background-modifier-active: #222c7d40;
 	--background-modifier-hover: #19197040;
+	
+	--interactive-custom-normal: var(--mainColor);
+	--interactive-custom-hover: #5da0e3;
+	--interactive-custom-active: #9ccdff;
 	
 	/* Mention (1.bgcolor 2.side line color)*/
 	--background-mentioned: var(--background-modifier-selected);
 	--background-mentioned-hover: var(--background-modifier-hover);
 	--info-warning-foreground: var(--mainColor);
-	
-	--interactive-custom-normal: var(--mainColor);
-	--interactive-custom-hover: #5da0e3;
-	--interactive-custom-active: #9ccdff;
 	
 	--text-muted: var(--mainColor);
 	--background-floating: var(--background-secondary);
